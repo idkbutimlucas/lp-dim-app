@@ -7,6 +7,7 @@ import { StudentDetailsComponent } from './pages/student-details/student-details
 import { StudentFormComponent } from './components/student-form/student-form.component';
 import { SharedModule } from '../shared/shared.module';
 import { StudentService } from './services/student.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { StudentService } from './services/student.service';
     StudentDetailsComponent,
     StudentFormComponent,
   ],
-  imports: [CommonModule, StudentRoutingModule, SharedModule],
+  imports: [CommonModule, StudentRoutingModule, SharedModule, HttpClientModule],
   providers: [StudentService],
 })
 export class StudentModule {}
