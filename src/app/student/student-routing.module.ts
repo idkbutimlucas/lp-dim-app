@@ -7,22 +7,22 @@ import { StudentComponent } from './student.component';
 const routes: Routes = [
   {
     path: '',
-    component: StudentComponent,
-    children: [
-      { 
-        path: '' ,
-        component: StudentListComponent,
+    component : StudentComponent,
+    children : [
+      {
+        path : '',
+        component : StudentListComponent
       },
       {
-        path: ':id',
-        component: StudentDetailsComponent,
+        path : ':id',
+        component : StudentDetailsComponent
       }
-    ],
-  },
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class StudentRoutingModule {}
+export class StudentRoutingModule { }
